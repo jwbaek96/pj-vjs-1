@@ -214,7 +214,69 @@ body {
    =================================== */
 .main-content {
     flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
     padding: var(--spacing-lg) var(--spacing-sm);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Desktop layout with sidebars */
+@media (min-width: 1200px) {
+    .main-content {
+        grid-template-columns: 300px 1fr 300px;
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    /* Ad sidebars - automatically created via ::before and ::after */
+    .main-content::before,
+    .main-content::after {
+        content: '';
+        display: block;
+        min-height: 600px;
+        background: var(--surface);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+        position: sticky;
+        top: 80px;
+        padding: var(--spacing-md);
+    }
+    
+    /* Left sidebar */
+    .main-content::before {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    /* Right sidebar */
+    .main-content::after {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    /* Main container stays in middle */
+    .main-content > .container {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* Tablet - hide sidebars */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .main-content::before,
+    .main-content::after {
+        display: none;
+    }
+}
+
+/* Mobile - hide sidebars */
+@media (max-width: 767px) {
+    .main-content::before,
+    .main-content::after {
+        display: none;
+    }
 }
 
 /* ===================================

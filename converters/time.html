@@ -4,8 +4,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?�� ?�화 변?�기 - QuickConvert</title>
-    <link rel="stylesheet" href="style.css">
+    <title>???�간 변?�기 - QuickConvert</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header class="header">
@@ -19,8 +19,8 @@
                     <li><a href="index.html" class="nav-link">??/a></li>
                     <li class="nav-item-dropdown"><a href="#" class="nav-link active">?�위 변?�기</a>
                         <ul class="dropdown-menu">
-                            <li><a href="length.html" class="dropdown-link">?�� 길이</a></li>
-                            <li><a href="weight.html" class="dropdown-link">?�️ 무게</a></li>
+                            <li><a href="converters/length.html" class="dropdown-link">?�� 길이</a></li>
+                            <li><a href="converters/weight.html" class="dropdown-link">?�️ 무게</a></li>
                             <li><a href="temperature.html" class="dropdown-link">?���??�도</a></li>
                             <li><a href="acceleration.html" class="dropdown-link">?? 가??/a></li>
                             <li><a href="angle.html" class="dropdown-link">?�� 각도</a></li>
@@ -46,7 +46,7 @@
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <main class="main-content">
         <div class="container">
-            <section class="hero-section"><h2 class="hero-title">?�� ?�화 변?�기</h2><p class="hero-subtitle">?? ?�러, ?�로 ?�을 간편?�게 변??(참고???�율)</p></section>
+            <section class="hero-section"><h2 class="hero-title">???�간 변?�기</h2><p class="hero-subtitle">�? �? ?�간, ???�을 간편?�게 변??/p></section>
             <section class="converter-section">
                 <div class="input-group">
                     <label for="inputValue" class="input-label">변?�할 �?/label>
@@ -59,14 +59,11 @@
                     <div class="output-field" id="outputValue">0</div>
                     <select id="toUnit" class="unit-select"></select>
                 </div>
-                <div class="result-display">
-                    <p id="resultText" class="result-text">변??결과가 ?�기???�시?�니??/p>
-                    <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 8px;">??참고???�율?�니?? ?�시�??�율???�닙?�다.</p>
-                </div>
+                <div class="result-display"><p id="resultText" class="result-text">변??결과가 ?�기???�시?�니??/p></div>
             </section>
         </div>
     </main>
     <footer class="footer"><div class="footer-container"><div class="footer-bottom"><p>&copy; 2025 QuickConvert.</p></div></div></footer>
-    <script src="js/converter-data.js"></script><script src="js/converter.js"></script><script>initConverter('currency');</script>
+    <script src="../js/converter-data.js"></script><script src="../js/converter.js"></script><script>initConverter('time');</script>
 </body>
 </html>

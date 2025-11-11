@@ -40,7 +40,9 @@ function setActiveNavLink() {
                                 'angle.html', 'data.html', 'volume.html', 'speed.html', 'time.html', 
                                 'pressure.html', 'energy.html', 'power.html', 'area.html', 'torque.html', 
                                 'currency.html', 'force.html'];
-        if (converterPages.includes(currentPage) && link.textContent.trim() === '단위 변환기') {
+        // Check if current path includes /converters/ folder
+        if ((converterPages.includes(currentPage) || window.location.pathname.includes('/converters/')) 
+            && link.textContent.trim() === '단위 변환기') {
             link.classList.add('active');
         }
     });
