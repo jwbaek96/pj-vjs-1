@@ -1,0 +1,39 @@
+<!-- Converter UI Template -->
+<section class="converter-section">
+    <!-- Input Section -->
+    <div class="input-group">
+        <label for="inputValue" class="input-label">변환할 값</label>
+        <input 
+            type="number" 
+            id="inputValue" 
+            class="input-field" 
+            placeholder="숫자를 입력하세요"
+            step="any"
+            autocomplete="off"
+        >
+        <select id="fromUnit" class="unit-select" aria-label="변환할 단위 선택">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+
+    <!-- Swap Button -->
+    <div class="swap-section">
+        <button id="swapButton" class="swap-button" aria-label="단위 교환">
+            ⇅
+        </button>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-group">
+        <label for="outputValue" class="output-label">변환 결과</label>
+        <div class="output-field" id="outputValue">0</div>
+        <select id="toUnit" class="unit-select" aria-label="변환될 단위 선택">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+
+    <!-- Result Display -->
+    <div class="result-display">
+        <p id="resultText" class="result-text">변환 결과가 여기에 표시됩니다</p>
+    </div>
+</section>

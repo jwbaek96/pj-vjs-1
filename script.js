@@ -79,7 +79,12 @@ const elements = {
     toUnit: document.getElementById('toUnit'),
     resultText: document.getElementById('resultText'),
     swapButton: document.getElementById('swapButton'),
-    tabButtons: document.querySelectorAll('.tab-button')
+    tabButtons: document.querySelectorAll('.tab-button'),
+    hamburger: document.getElementById('hamburger'),
+    mainNav: document.getElementById('mainNav'),
+    sidebarOverlay: document.getElementById('sidebarOverlay'),
+    navLinks: document.querySelectorAll('.nav-link'),
+    dropdownItems: document.querySelectorAll('.nav-item-dropdown')
 };
 
 // ===================================
@@ -240,6 +245,104 @@ function handleSwap() {
     updateConversion();
 }
 
+// ===================================
+// MOBILE MENU HANDLERS
+// ===================================
+
+function toggleMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    
+    if (!hamburger || !mainNav || !sidebarOverlay) return;
+    
+    const isOpen = mainNav.classList.contains('active');
+    
+    if (isOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+}
+
+function openMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    
+    if (!hamburger || !mainNav || !sidebarOverlay) return;
+    
+    mainNav.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', '메뉴 닫기');
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    
+    if (!hamburger || !mainNav || !sidebarOverlay) return;
+    
+    mainNav.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', '메뉴 열기');
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+}
+
+// Navigation initialization function (called after dynamic header load)
+function initializeNavigation() {
+    const hamburger = document.getElementById('hamburger');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+    
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeMenu);
+    }
+    
+    // Close menu when clicking nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+    
+    // Close menu on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const mainNav = document.getElementById('mainNav');
+            if (mainNav && mainNav.classList.contains('active')) {
+                closeMenu();
+            }
+        }
+    });
+    
+    // Mobile dropdown toggle
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        if (link) {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 767) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        }
+    });
+}
+
 function attachEventListeners() {
     // Tab button clicks
     elements.tabButtons.forEach(button => {
@@ -263,6 +366,9 @@ function attachEventListeners() {
             handleSwap();
         }
     });
+    
+    // Initialize navigation after header is loaded
+    initializeNavigation();
 }
 
 // ===================================

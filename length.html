@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickConvert Í∏∏Ïù¥ Î≥Ä?òÍ∏∞ - ÎØ∏ÌÑ∞, ?¨Î°úÎØ∏ÌÑ∞, ?ºÌä∏, ?∏Ïπò ???§Ïñë??Í∏∏Ïù¥ ?®ÏúÑÎ•?Îπ†Î•¥Í≥??ïÌôï?òÍ≤å Î≥Ä?òÌïò?∏Ïöî.">
+    <meta name="keywords" content="Í∏∏Ïù¥ Î≥Ä?? ÎØ∏ÌÑ∞, ?¨Î°úÎØ∏ÌÑ∞, ?ºÌä∏, ?∏Ïπò, ?®ÏúÑ Î≥Ä?òÍ∏∞">
+    <title>?ìè Í∏∏Ïù¥ Î≥Ä?òÍ∏∞ - QuickConvert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h2 class="hero-title">?ìè Í∏∏Ïù¥ Î≥Ä?òÍ∏∞</h2>
+                <p class="hero-subtitle">ÎØ∏ÌÑ∞, ?¨Î°úÎØ∏ÌÑ∞, ?ºÌä∏, ?∏Ïπò ?±ÏùÑ Í∞ÑÌé∏?òÍ≤å Î≥Ä??/p>
+            </section>
+
+            <!-- Conversion Interface -->
+            <section class="converter-section">
+                <!-- Input Section -->
+                <div class="input-group">
+                    <label for="inputValue" class="input-label">Î≥Ä?òÌï† Í∞?/label>
+                    <input 
+                        type="number" 
+                        id="inputValue" 
+                        class="input-field" 
+                        placeholder="?´ÏûêÎ•??ÖÎ†•?òÏÑ∏??
+                        step="any"
+                        autocomplete="off"
+                    >
+                    <select id="fromUnit" class="unit-select" aria-label="Î≥Ä?òÌï† ?®ÏúÑ ?†ÌÉù">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Swap Button -->
+                <div class="swap-section">
+                    <button id="swapButton" class="swap-button" aria-label="?®ÏúÑ ÍµêÌôò">
+                        ??
+                    </button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-group">
+                    <label for="outputValue" class="output-label">Î≥Ä??Í≤∞Í≥º</label>
+                    <div class="output-field" id="outputValue">0</div>
+                    <select id="toUnit" class="unit-select" aria-label="Î≥Ä?òÎê† ?®ÏúÑ ?†ÌÉù">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Result Display -->
+                <div class="result-display">
+                    <p id="resultText" class="result-text">Î≥Ä??Í≤∞Í≥ºÍ∞Ä ?¨Í∏∞???úÏãú?©Îãà??/p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/converter-data.js"></script>
+    <script src="js/converter.js"></script>
+    <script>
+        initConverter('length');
+    </script>
+</body>
+</html>
