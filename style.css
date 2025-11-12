@@ -123,6 +123,7 @@ body {
 
 .dropdown-menu {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
@@ -205,7 +206,7 @@ body {
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger.active .hamburger-line:nth-child(2) {
@@ -213,7 +214,7 @@ body {
 }
 
 .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Sidebar Overlay */
@@ -729,13 +730,15 @@ input[type="number"]::-webkit-outer-spin-button {
         top: 0;
         right: -100%;
         height: 100vh;
-        width: 280px;
+        width: 100%;
+        max-width: 300px;
         background: linear-gradient(180deg, var(--primary-color), #667eea);
         box-shadow: -4px 0 12px var(--shadow);
         transition: right var(--transition-smooth);
         z-index: 1000;
         padding: 80px 0 var(--spacing-lg);
         overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .main-nav.active {
@@ -744,6 +747,7 @@ input[type="number"]::-webkit-outer-spin-button {
     
     .nav-menu {
         flex-direction: column;
+        flex-wrap: nowrap;
         gap: 0;
         width: 100%;
     }
@@ -776,6 +780,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .nav-item-dropdown .dropdown-menu {
         position: static;
         display: none;
+        flex-direction: column;
         background: rgba(255, 255, 255, 0.1);
         box-shadow: none;
         padding: 0;
@@ -783,6 +788,7 @@ input[type="number"]::-webkit-outer-spin-button {
         border-radius: 0;
         max-height: none;
         overflow-y: visible;
+        width: 100%;
     }
     
     .nav-item-dropdown.active .dropdown-menu {

@@ -30,13 +30,13 @@ function setActiveNavLink() {
         const href = link.getAttribute('href');
         const linkText = link.textContent.trim();
         
-        // 홈 페이지
-        if (href && href.endsWith('index.html') && currentPage === 'index.html' && !currentPath.includes('/blog/') && !currentPath.includes('/converters/') && !currentPath.includes('/calculators/')) {
+        // 홈 페이지 (루트의 index.html만)
+        if (linkText === '홈' && currentPage === 'index.html' && !currentPath.includes('/blog/') && !currentPath.includes('/converters/') && !currentPath.includes('/calculators/')) {
             link.classList.add('active');
         }
         
-        // 블로그 페이지들
-        if ((currentPage.startsWith('blog-') || currentPath.includes('/blog/')) && linkText === '블로그') {
+        // 블로그 페이지들 (/blog/ 경로에 있는 경우만)
+        if (currentPath.includes('/blog/') && linkText === '블로그') {
             link.classList.add('active');
         }
         

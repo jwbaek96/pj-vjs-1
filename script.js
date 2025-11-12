@@ -314,9 +314,19 @@ function initializeNavigation() {
         sidebarOverlay.addEventListener('click', closeMenu);
     }
     
-    // Close menu when clicking nav links
+    // Close menu when clicking nav links (but not dropdown toggles)
     navLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
+        link.addEventListener('click', (e) => {
+            // Don't close if this is a dropdown toggle (has # href)
+            const href = link.getAttribute('href');
+            if (href === '#') {
+                return; // Let the dropdown toggle handler deal with it
+            }
+            // Close menu for actual navigation links
+            setTimeout(() => {
+                closeMenu();
+            }, 100);
+        });
     });
     
     // Close menu on ESC key
