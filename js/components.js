@@ -23,27 +23,58 @@ function getRootPath() {
 // 현재 페이지에 맞게 active 클래스 추가
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage) {
+        const linkText = link.textContent.trim();
+        
+        // 홈 페이지
+        if (href && href.endsWith('index.html') && currentPage === 'index.html' && !currentPath.includes('/blog/') && !currentPath.includes('/converters/') && !currentPath.includes('/calculators/')) {
             link.classList.add('active');
         }
-        // 블로그 페이지들은 blog.html 또는 blog/index.html을 active로 표시
-        if ((currentPage.startsWith('blog-') || window.location.pathname.includes('/blog/')) 
-            && (href === 'blog.html' || href === 'blog/index.html' || href === '../blog/index.html')) {
+        
+        // 블로그 페이지들
+        if ((currentPage.startsWith('blog-') || currentPath.includes('/blog/')) && linkText === '블로그') {
             link.classList.add('active');
         }
-        // 변환기 페이지들은 단위 변환기를 active로 표시
+        
+        // 변환기 페이지들
         const converterPages = ['length.html', 'weight.html', 'temperature.html', 'acceleration.html', 
                                 'angle.html', 'data.html', 'volume.html', 'speed.html', 'time.html', 
                                 'pressure.html', 'energy.html', 'power.html', 'area.html', 'torque.html', 
                                 'currency.html', 'force.html'];
-        // Check if current path includes /converters/ folder
-        if ((converterPages.includes(currentPage) || window.location.pathname.includes('/converters/')) 
-            && link.textContent.trim() === '단위 변환기') {
+        if ((converterPages.includes(currentPage) || currentPath.includes('/converters/')) && linkText === '단위 변환기') {
             link.classList.add('active');
+        }
+        
+        // 계산기 페이지들
+        const calculatorPages = ['exchange-rate.html', 'discount.html', 'tip.html', 'salary.html', 
+                                 'bmi.html', 'calorie.html', 'water.html'];
+        if ((calculatorPages.includes(currentPage) || currentPath.includes('/calculators/')) && linkText === '계산기') {
+            link.classList.add('active');
+        }
+    });
+}
+
+// 헤더 링크 경로 수정 함수
+function fixHeaderLinks() {
+    const rootPath = getRootPath();
+    const headerLinks = document.querySelectorAll('.header a[href]');
+    
+    headerLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // # 링크는 수정하지 않음
+        if (href === '#') return;
+        
+        // 이미 http로 시작하는 외부 링크는 수정하지 않음
+        if (href.startsWith('http')) return;
+        
+        // 현재 경로가 루트가 아니면 rootPath 추가
+        if (rootPath !== './' && !href.startsWith('../') && !href.startsWith('http')) {
+            link.setAttribute('href', rootPath + href);
         }
     });
 }
@@ -61,6 +92,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (converterPlaceholder) {
         await loadComponent('converter-placeholder', rootPath + 'components/converter-template.html');
     }
+    
+    // 헤더 링크 경로 수정
+    fixHeaderLinks();
     
     // 헤더와 푸터가 로드된 후 active 클래스 설정
     setActiveNavLink();

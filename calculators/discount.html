@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="할인 계산기 - 원가, 할인율로 할인가를 계산하거나 할인 금액을 역산. 세일, 쇼핑 시 유용한 무료 할인율 계산 도구.">
+    <meta name="keywords" content="할인 계산기, 할인율 계산, 세일 가격, 할인가, 원가 계산">
+    <title>할인 계산기 - QuickConvert</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h2 class="hero-title">🏷️ 할인 계산기</h2>
+                <p class="hero-subtitle">원가와 할인율로 최종 가격을 계산하세요</p>
+            </section>
+
+            <!-- Calculator Section -->
+            <section class="calculator-section">
+                <div class="calc-input-group">
+                    <label for="originalPrice" class="calc-label">원가</label>
+                    <input 
+                        type="number" 
+                        id="originalPrice" 
+                        class="calc-input" 
+                        placeholder="원가 입력"
+                        value="100000"
+                        step="any"
+                        min="0"
+                    >
+                    <span class="calc-unit">원</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="discountRate" class="calc-label">할인율</label>
+                    <input 
+                        type="number" 
+                        id="discountRate" 
+                        class="calc-input" 
+                        placeholder="할인율 입력"
+                        value="20"
+                        step="any"
+                        min="0"
+                        max="100"
+                    >
+                    <span class="calc-unit">%</span>
+                </div>
+
+                <div class="calc-result-box">
+                    <div class="calc-result-item">
+                        <span class="calc-result-label">할인 금액</span>
+                        <span class="calc-result-value" id="discountAmount">20,000원</span>
+                    </div>
+                    <div class="calc-result-item highlight">
+                        <span class="calc-result-label">최종 가격</span>
+                        <span class="calc-result-value" id="finalPrice">80,000원</span>
+                    </div>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">계산하기</button>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h3>할인 계산기 사용 방법</h3>
+                <ul>
+                    <li>상품의 원가를 입력하세요</li>
+                    <li>할인율(%)을 입력하세요</li>
+                    <li>할인 금액과 최종 가격이 자동 계산됩니다</li>
+                </ul>
+                <div class="info-formula">
+                    <h4>계산 공식</h4>
+                    <p>할인 금액 = 원가 × (할인율 ÷ 100)</p>
+                    <p>최종 가격 = 원가 - 할인 금액</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/discount.js"></script>
+</body>
+</html>

@@ -336,10 +336,30 @@ function initializeNavigation() {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 767) {
                     e.preventDefault();
+                    
+                    // Close other open dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
                     item.classList.toggle('active');
                 }
             });
         }
+    });
+    
+    // Prevent dropdown links from closing the menu immediately
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Let the link work normally, but add a small delay before closing menu
+            setTimeout(() => {
+                closeMenu();
+            }, 100);
+        });
     });
 }
 

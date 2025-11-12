@@ -1,200 +1,106 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QuickConvert 블로�?- ?�위 변??가?�드, ?? ?�용???�보�??�공?�니??">
-    <meta name="keywords" content="?�위 변??가?�드, 변???? 길이 변?? 무게 변?? ?�도 변??>
-    <title>블로�?- QuickConvert</title>
+    <meta name="description" content="QuickConvert 블로그 - 단위 변환 가이드, 팁, 유용한 정보를 공유합니다">
+    <meta name="keywords" content="단위 변환 가이드, 변환 팁, 길이 변환, 무게 변환, 온도 변환">
+    <title>블로그 - QuickConvert</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        .blog-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--spacing-lg) var(--spacing-md);
-        }
-        .blog-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-        .blog-header h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-sm);
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-        .blog-card {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: 0 2px 8px var(--shadow);
-            transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-            text-decoration: none;
-            color: var(--text-primary);
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px var(--shadow-hover);
-        }
-        .blog-card-image {
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, var(--primary-color), #667eea);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-        .blog-card-content {
-            padding: var(--spacing-md);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card-date {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-xs);
-        }
-        .blog-card-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--spacing-sm);
-            line-height: 1.4;
-        }
-        .blog-card-excerpt {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            flex: 1;
-        }
-        .blog-card-footer {
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .blog-card-category {
-            font-size: 0.85rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        .blog-card-readmore {
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
+        .blog-container { max-width: 900px; margin: 0 auto; padding: var(--spacing-lg) var(--spacing-md); }
+        .blog-header { text-align: center; margin-bottom: var(--spacing-xl); }
+        .blog-header h1 { font-size: 2rem; color: var(--primary-color); margin-bottom: var(--spacing-sm); }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-lg); }
+        .blog-card { background: var(--surface); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 2px 8px var(--shadow); transition: transform var(--transition-smooth), box-shadow var(--transition-smooth); text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px var(--shadow-hover); }
+        .blog-card-content { padding: var(--spacing-md); flex: 1; display: flex; flex-direction: column; }
+        .blog-card-date { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--spacing-xs); }
+        .blog-card-title { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: var(--spacing-sm); line-height: 1.4; }
+        .blog-card-excerpt { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; flex: 1; }
+        .blog-card-footer { padding: var(--spacing-sm) var(--spacing-md); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .blog-card-category { font-size: 0.85rem; color: var(--primary-color); font-weight: 600; }
+        .blog-card-readmore { font-size: 0.9rem; color: var(--primary-color); font-weight: 600; }
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
-
     <main class="blog-container">
         <div class="blog-header">
-            <h1>?�� QuickConvert 블로�?/h1>
-            <p>?�위 변?�에 관???�용???�보?�??�을 공유?�니??/p>
+            <h1> QuickConvert 블로그</h1>
+            <p>단위 변환에 관한 유용한 정보와 팁을 공유합니다</p>
         </div>
-
         <div class="blog-grid">
-            <!-- Blog Post 1 -->
             <a href="posts/blog-length-guide.html" class="blog-card">
-                <div class="blog-card-image">?��</div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??11??/div>
-                    <h2 class="blog-card-title">길이 ?�위 변???�벽 가?�드</h2>
-                    <p class="blog-card-excerpt">미터, ?�트, ?�치 ???�양??길이 ?�위�??�게 변?�하??방법�??�상?�활?�서 ?�용?�는 ?�을 ?�개?�니??</p>
+                    <div class="blog-card-date">2025년 11월 11일</div>
+                    <h2 class="blog-card-title">길이 단위 변환 완벽 가이드</h2>
+                    <p class="blog-card-excerpt">미터, 피트, 인치 등 다양한 길이 단위를 쉽게 변환하는 방법과 일상생활에서 활용하는 팁을 소개합니다</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">길이 변??/span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">길이 변환</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
-
-            <!-- Blog Post 2 -->
             <a href="posts/blog-temperature-guide.html" class="blog-card">
-                <div class="blog-card-image">?���?/div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??10??/div>
-                    <h2 class="blog-card-title">??��?�??�씨, ?�도 변???�게 ?�기</h2>
-                    <p class="blog-card-excerpt">??��(°C)?�??�씨(°F)??차이?�과 빠르�?변?�하??방법, ?�외?�행 ???�용???�도 변???�을 ?�아봅니??</p>
+                    <div class="blog-card-date">2025년 11월 10일</div>
+                    <h2 class="blog-card-title">섭씨, 화씨, 온도 변환 쉽게 하기</h2>
+                    <p class="blog-card-excerpt">섭씨(C)와 화씨(F)의 차이점과 빠르게 변환하는 방법, 해외여행 시 유용한 온도 변환 팁을 알아봅니다</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">?�도 변??/span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">온도 변환</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
-
-            <!-- Blog Post 3 -->
             <a href="posts/blog-data-size-guide.html" class="blog-card">
-                <div class="blog-card-image">?��</div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??9??/div>
-                    <h2 class="blog-card-title">?�이???�기 ?�위 ?�벽 ?�리 (KB, MB, GB)</h2>
-                    <p class="blog-card-excerpt">바이?? ?�로바이?? 메�?바이?? 기�?바이?�의 관계�? ?�해?�고, ?�일 ?�기�??�게 계산?�는 방법??배워봅시??</p>
+                    <div class="blog-card-date">2025년 11월 9일</div>
+                    <h2 class="blog-card-title">데이터 크기 단위 완벽 정리 (KB, MB, GB)</h2>
+                    <p class="blog-card-excerpt">바이트, 킬로바이트, 메가바이트, 기가바이트의 관계를 이해하고, 파일 크기를 쉽게 계산하는 방법을 배워봅시다</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">?�이???�기</span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">데이터 크기</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
-
-            <!-- Blog Post 4 -->
             <a href="posts/blog-area-pyeong.html" class="blog-card">
-                <div class="blog-card-image">?��</div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??8??/div>
-                    <h2 class="blog-card-title">?�수�??�곱미터�?변?�하??�?/h2>
-                    <p class="blog-card-excerpt">?�국?�서 ?�주 ?�용?�는 ???? ?�위�??�곱미터(??�?변?�하??방법�?부?�산 면적 계산 꿀?�을 ?�개?�니??</p>
+                    <div class="blog-card-date">2025년 11월 8일</div>
+                    <h2 class="blog-card-title">평수를 제곱미터로 변환하기</h2>
+                    <p class="blog-card-excerpt">한국에서 자주 사용하는 평과 단위를 제곱미터(㎡)로 변환하는 방법과 부동산 면적 계산 꿀팁을 소개합니다</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">면적 변??/span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">면적 변환</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
-
-            <!-- Blog Post 5 -->
             <a href="posts/blog-weight-cooking.html" class="blog-card">
-                <div class="blog-card-image">?�️</div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??7??/div>
-                    <h2 class="blog-card-title">?�리?????�수! 무게 ?�위 변????/h2>
-                    <p class="blog-card-excerpt">그램(g), ?�로그램(kg), ?�운??lb), ?�스(oz) ???�리 ?�시?�에 ?�오??무게 ?�위�??�게 변?�하??방법???�려?�립?�다.</p>
+                    <div class="blog-card-date">2025년 11월 7일</div>
+                    <h2 class="blog-card-title">요리 필수! 무게 단위 변환 팁</h2>
+                    <p class="blog-card-excerpt">그램(g), 킬로그램(kg), 파운드(lb), 온스(oz) 등 요리 레시피에 나오는 무게 단위를 쉽게 변환하는 방법을 알려드립니다.</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">무게 변??/span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">무게 변환</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
-
-            <!-- Blog Post 6 -->
             <a href="posts/blog-speed-travel.html" class="blog-card">
-                <div class="blog-card-image">?��</div>
                 <div class="blog-card-content">
-                    <div class="blog-card-date">2025??11??6??/div>
-                    <h2 class="blog-card-title">?�외 ?�라?�브, ?�도 ?�위 변??가?�드</h2>
-                    <p class="blog-card-excerpt">km/h?�?mph??차이�??�해?�고, ?�외?�행?�나 ?�입�??�전 ???�아?�면 ?�용???�도 변???�보�??�공?�니??</p>
+                    <div class="blog-card-date">2025년 11월 6일</div>
+                    <h2 class="blog-card-title">해외 드라이브, 속도 단위 변환 가이드</h2>
+                    <p class="blog-card-excerpt">km/h와 mph의 차이를 이해하고, 해외여행이나 수입차 운전 시 알아두면 유용한 속도 변환 정보를 공유합니다</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span class="blog-card-category">?�도 변??/span>
-                    <span class="blog-card-readmore">?�세??보기 ??/span>
+                    <span class="blog-card-category">속도 변환</span>
+                    <span class="blog-card-readmore">자세히 보기 </span>
                 </div>
             </a>
         </div>
     </main>
-
     <div id="footer-placeholder"></div>
-
     <script src="../js/components.js"></script>
     <script src="../script.js"></script>
 </body>

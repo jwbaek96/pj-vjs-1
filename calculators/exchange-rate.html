@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="환율 계산기 - USD, EUR, JPY, CNY 등 주요 통화 간 실시간 환율 변환. 빠르고 정확한 무료 온라인 환율 계산 도구.">
+    <meta name="keywords" content="환율 계산기, 환율 변환, USD, EUR, JPY, CNY, 달러, 유로, 엔화, 위안화">
+    <title>환율 계산기 - QuickConvert</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h2 class="hero-title">💱 환율 계산기</h2>
+                <p class="hero-subtitle">주요 통화 간 환율을 빠르게 변환하세요</p>
+            </section>
+
+            <!-- Calculator Section -->
+            <section class="calculator-section">
+                <div class="calc-input-group">
+                    <label for="fromAmount" class="calc-label">금액</label>
+                    <input 
+                        type="number" 
+                        id="fromAmount" 
+                        class="calc-input" 
+                        placeholder="금액 입력"
+                        value="1000"
+                        step="any"
+                    >
+                    <select id="fromCurrency" class="calc-select">
+                        <option value="KRW" selected>KRW (원)</option>
+                        <option value="USD">USD (달러)</option>
+                        <option value="EUR">EUR (유로)</option>
+                        <option value="JPY">JPY (엔)</option>
+                        <option value="CNY">CNY (위안)</option>
+                        <option value="GBP">GBP (파운드)</option>
+                    </select>
+                </div>
+
+                <div class="calc-swap-section">
+                    <button id="swapBtn" class="calc-swap-btn">⇅</button>
+                </div>
+
+                <div class="calc-output-group">
+                    <label for="toAmount" class="calc-label">변환 결과</label>
+                    <div class="calc-output" id="toAmount">0.00</div>
+                    <select id="toCurrency" class="calc-select">
+                        <option value="KRW">KRW (원)</option>
+                        <option value="USD" selected>USD (달러)</option>
+                        <option value="EUR">EUR (유로)</option>
+                        <option value="JPY">JPY (엔)</option>
+                        <option value="CNY">CNY (위안)</option>
+                        <option value="GBP">GBP (파운드)</option>
+                    </select>
+                </div>
+
+                <div class="calc-result">
+                    <p id="resultText" class="calc-result-text">1,000 KRW = 0.74 USD</p>
+                    <p class="calc-info-text">※ 실시간 환율이 아닌 참고 환율입니다</p>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">계산하기</button>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h3>환율 계산기 사용 방법</h3>
+                <ul>
+                    <li>변환할 금액을 입력하세요</li>
+                    <li>출발 통화와 도착 통화를 선택하세요</li>
+                    <li>자동으로 환율이 계산됩니다</li>
+                    <li>⇅ 버튼으로 통화를 교환할 수 있습니다</li>
+                </ul>
+                <p class="info-note">※ 본 환율은 참고용이며, 실제 거래 환율과 다를 수 있습니다.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/exchange-rate.js"></script>
+</body>
+</html>

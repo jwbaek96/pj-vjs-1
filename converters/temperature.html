@@ -1,85 +1,44 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QuickConvert ?�도 변?�기 - ??��, ?�씨, 켈빈 ???�양???�도 ?�위�?빠르�??�확?�게 변?�하?�요.">
-    <title>?���??�도 변?�기 - QuickConvert</title>
+    <meta name="description" content="QuickConvert 온도 변환기 - 섭씨, 화씨, 켈빈 등을 간편하게 변환">
+    <meta name="keywords" content="온도 변환, 단위 변환기, 온도">
+    <title> 온도 변환기 - QuickConvert</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="logo"><h1>QuickConvert</h1></div>
-            <button class="hamburger" id="hamburger" aria-label="메뉴 ?�기" aria-expanded="false">
-                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
-            </button>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">??/a></li>
-                    <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link active">?�위 변?�기</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="converters/length.html" class="dropdown-link">?�� 길이</a></li>
-                            <li><a href="converters/weight.html" class="dropdown-link">?�️ 무게</a></li>
-                            <li><a href="temperature.html" class="dropdown-link">?���??�도</a></li>
-                            <li><a href="acceleration.html" class="dropdown-link">?? 가??/a></li>
-                            <li><a href="angle.html" class="dropdown-link">?�� 각도</a></li>
-                            <li><a href="data.html" class="dropdown-link">?�� ?�이???�기</a></li>
-                            <li><a href="volume.html" class="dropdown-link">?�� 부??/a></li>
-                            <li><a href="speed.html" class="dropdown-link">?�� ?�도</a></li>
-                            <li><a href="time.html" class="dropdown-link">???�간</a></li>
-                            <li><a href="pressure.html" class="dropdown-link">?�� ?�력</a></li>
-                            <li><a href="energy.html" class="dropdown-link">???�너지</a></li>
-                            <li><a href="power.html" class="dropdown-link">???�력</a></li>
-                            <li><a href="area.html" class="dropdown-link">?���?면적</a></li>
-                            <li><a href="torque.html" class="dropdown-link">?�� ?�크</a></li>
-                            <li><a href="currency.html" class="dropdown-link">?�� ?�화</a></li>
-                            <li><a href="force.html" class="dropdown-link">?�� ??/a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index.html#about" class="nav-link">?�개</a></li>
-                    <li><a href="index.html#contact" class="nav-link">문의</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div id="header-placeholder"></div>
     <main class="main-content">
         <div class="container">
             <section class="hero-section">
-                <h2 class="hero-title">?���??�도 변?�기</h2>
-                <p class="hero-subtitle">??��, ?�씨, 켈빈??간편?�게 변??/p>
+                <h2 class="hero-title"> 온도 변환기</h2>
+                <p class="hero-subtitle">섭씨, 화씨, 켈빈 등을 간편하게 변환</p>
             </section>
             <section class="converter-section">
                 <div class="input-group">
-                    <label for="inputValue" class="input-label">변?�할 �?/label>
-                    <input type="number" id="inputValue" class="input-field" placeholder="?�자�??�력?�세?? step="any" autocomplete="off">
-                    <select id="fromUnit" class="unit-select"></select>
+                    <label for="inputValue" class="input-label">변환할 값</label>
+                    <input type="number" id="inputValue" class="input-field" placeholder="숫자를 입력하세요" step="any" autocomplete="off">
+                    <select id="fromUnit" class="unit-select" aria-label="변환할 단위 선택"></select>
                 </div>
-                <div class="swap-section"><button id="swapButton" class="swap-button">??/button></div>
+                <div class="swap-section">
+                    <button id="swapButton" class="swap-button" aria-label="단위 교환"></button>
+                </div>
                 <div class="output-group">
-                    <label for="outputValue" class="output-label">변??결과</label>
+                    <label for="outputValue" class="output-label">변환 결과</label>
                     <div class="output-field" id="outputValue">0</div>
-                    <select id="toUnit" class="unit-select"></select>
+                    <select id="toUnit" class="unit-select" aria-label="변환될 단위 선택"></select>
                 </div>
-                <div class="result-display"><p id="resultText" class="result-text">변??결과가 ?�기???�시?�니??/p></div>
+                <div class="result-display">
+                    <p id="resultText" class="result-text">변환 결과가 여기에 표시됩니다</p>
+                </div>
             </section>
         </div>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand"><h3>QuickConvert</h3></div>
-                <div class="footer-links">
-                    <div class="footer-column"><h4>?�비??/h4><ul><li><a href="index.html">?�위 변?�기</a></li></ul></div>
-                </div>
-            </div>
-            <div class="footer-bottom"><p>&copy; 2025 QuickConvert.</p></div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="../js/components.js"></script>
     <script src="../js/converter-data.js"></script>
     <script src="../js/converter.js"></script>
     <script>initConverter('temperature');</script>

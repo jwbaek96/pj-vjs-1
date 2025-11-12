@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="팁 계산기 - 식사 금액과 팁 비율로 팁과 총액을 계산. 레스토랑, 카페에서 유용한 무료 팁 계산 도구.">
+    <meta name="keywords" content="팁 계산기, 팁 계산, 식사 비용, 레스토랑 팁, 봉사료">
+    <title>팁 계산기 - QuickConvert</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h2 class="hero-title">💵 팁 계산기</h2>
+                <p class="hero-subtitle">식사 금액과 팁 비율로 총액을 계산하세요</p>
+            </section>
+
+            <!-- Calculator Section -->
+            <section class="calculator-section">
+                <div class="calc-input-group">
+                    <label for="billAmount" class="calc-label">식사 금액</label>
+                    <input 
+                        type="number" 
+                        id="billAmount" 
+                        class="calc-input" 
+                        placeholder="식사 금액 입력"
+                        value="50000"
+                        step="any"
+                        min="0"
+                    >
+                    <span class="calc-unit">원</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="tipRate" class="calc-label">팁 비율</label>
+                    <input 
+                        type="number" 
+                        id="tipRate" 
+                        class="calc-input" 
+                        placeholder="팁 비율 입력"
+                        value="10"
+                        step="any"
+                        min="0"
+                        max="100"
+                    >
+                    <span class="calc-unit">%</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="numPeople" class="calc-label">인원 수</label>
+                    <input 
+                        type="number" 
+                        id="numPeople" 
+                        class="calc-input" 
+                        placeholder="인원 수 입력"
+                        value="1"
+                        step="1"
+                        min="1"
+                    >
+                    <span class="calc-unit">명</span>
+                </div>
+
+                <div class="calc-result-box">
+                    <div class="calc-result-item">
+                        <span class="calc-result-label">팁 금액</span>
+                        <span class="calc-result-value" id="tipAmount">5,000원</span>
+                    </div>
+                    <div class="calc-result-item highlight">
+                        <span class="calc-result-label">총 금액</span>
+                        <span class="calc-result-value" id="totalAmount">55,000원</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="calc-result-label">1인당 금액</span>
+                        <span class="calc-result-value" id="perPerson">55,000원</span>
+                    </div>
+                </div>
+
+                <div class="tip-presets">
+                    <button class="tip-preset-btn" data-tip="10">10%</button>
+                    <button class="tip-preset-btn" data-tip="15">15%</button>
+                    <button class="tip-preset-btn" data-tip="20">20%</button>
+                    <button class="tip-preset-btn" data-tip="25">25%</button>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">계산하기</button>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h3>팁 계산기 사용 방법</h3>
+                <ul>
+                    <li>식사 금액을 입력하세요</li>
+                    <li>팁 비율(%)을 입력하거나 프리셋 버튼을 클릭하세요</li>
+                    <li>인원 수를 입력하면 1인당 금액이 계산됩니다</li>
+                </ul>
+                <div class="info-formula">
+                    <h4>계산 공식</h4>
+                    <p>팁 금액 = 식사 금액 × (팁 비율 ÷ 100)</p>
+                    <p>총 금액 = 식사 금액 + 팁 금액</p>
+                    <p>1인당 금액 = 총 금액 ÷ 인원 수</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/tip.js"></script>
+</body>
+</html>
