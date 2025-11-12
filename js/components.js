@@ -58,27 +58,6 @@ function setActiveNavLink() {
     });
 }
 
-// 헤더 링크 경로 수정 함수
-function fixHeaderLinks() {
-    const rootPath = getRootPath();
-    const headerLinks = document.querySelectorAll('.header a[href]');
-    
-    headerLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        
-        // # 링크는 수정하지 않음
-        if (href === '#') return;
-        
-        // 이미 http로 시작하는 외부 링크는 수정하지 않음
-        if (href.startsWith('http')) return;
-        
-        // 현재 경로가 루트가 아니면 rootPath 추가
-        if (rootPath !== './' && !href.startsWith('../') && !href.startsWith('http')) {
-            link.setAttribute('href', rootPath + href);
-        }
-    });
-}
-
 // 페이지 로드 시 헤더와 푸터 삽입
 document.addEventListener('DOMContentLoaded', async () => {
     const rootPath = getRootPath();
@@ -92,9 +71,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (converterPlaceholder) {
         await loadComponent('converter-placeholder', rootPath + 'components/converter-template.html');
     }
-    
-    // 헤더 링크 경로 수정
-    fixHeaderLinks();
     
     // 헤더와 푸터가 로드된 후 active 클래스 설정
     setActiveNavLink();
