@@ -1,15 +1,57 @@
 // 환율 계산기
-// 주요 통화 간 환율 변환
+// 주요 통화 간 환율 변환 (실시간 API 사용)
 
-// 2024년 기준 KRW 대비 환율 (참고용)
-const exchangeRates = {
-    KRW: { KRW: 1, USD: 0.00074, EUR: 0.00068, JPY: 0.11, CNY: 0.0053, GBP: 0.00059 },
-    USD: { KRW: 1350, USD: 1, EUR: 0.92, JPY: 149, CNY: 7.2, GBP: 0.79 },
-    EUR: { KRW: 1470, USD: 1.09, EUR: 1, JPY: 162, CNY: 7.85, GBP: 0.86 },
-    JPY: { KRW: 9.1, USD: 0.0067, EUR: 0.0062, JPY: 1, CNY: 0.048, GBP: 0.0053 },
-    CNY: { KRW: 189, USD: 0.14, EUR: 0.13, JPY: 20.8, CNY: 1, GBP: 0.11 },
-    GBP: { KRW: 1700, USD: 1.26, EUR: 1.16, JPY: 188, CNY: 9.1, GBP: 1 }
-};
+// 환율 데이터 저장
+let exchangeRates = null;
+let lastUpdated = null;
+
+// 실시간 환율 가져오기 (ExchangeRate-API 무료 사용)
+async function fetchExchangeRates() {
+    try {
+        const response = await fetch('https://open.exchangerate-api.com/v6/latest/USD');
+        const data = await response.json();
+        
+        if (data && data.rates) {
+            exchangeRates = data.rates;
+            lastUpdated = new Date(data.time_last_update_utc);
+            updateLastUpdatedText();
+            return true;
+        }
+    } catch (error) {
+        console.error('환율 정보를 가져오는데 실패했습니다:', error);
+        // 실패 시 기본 환율 사용
+        useFallbackRates();
+    }
+    return false;
+}
+
+// API 실패 시 기본 환율 사용
+function useFallbackRates() {
+    exchangeRates = {
+        KRW: 1350,
+        USD: 1,
+        EUR: 0.92,
+        JPY: 149,
+        CNY: 7.2,
+        GBP: 0.79
+    };
+    lastUpdated = null;
+}
+
+// 마지막 업데이트 시간 표시
+function updateLastUpdatedText() {
+    const infoText = document.querySelector('.calc-info-text');
+    if (infoText && lastUpdated) {
+        const timeStr = lastUpdated.toLocaleString('ko-KR', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        infoText.textContent = `※ 실시간 환율 (마지막 업데이트: ${timeStr})`;
+    }
+}
 
 // 숫자 포맷팅 함수
 function formatNumber(num) {
@@ -21,6 +63,11 @@ function formatNumber(num) {
 
 // 환율 계산 함수
 function calculateExchange() {
+    if (!exchangeRates) {
+        document.getElementById('resultText').textContent = '환율 정보를 불러오는 중...';
+        return;
+    }
+    
     const fromAmount = parseFloat(document.getElementById('fromAmount').value) || 0;
     const fromCurrency = document.getElementById('fromCurrency').value;
     const toCurrency = document.getElementById('toCurrency').value;
@@ -31,9 +78,21 @@ function calculateExchange() {
         return;
     }
     
-    // 환율 계산
-    const rate = exchangeRates[fromCurrency][toCurrency];
-    const result = fromAmount * rate;
+    // USD 기준으로 환율 계산
+    // fromCurrency -> USD -> toCurrency
+    const fromRate = exchangeRates[fromCurrency];
+    const toRate = exchangeRates[toCurrency];
+    
+    let result;
+    if (fromCurrency === 'USD') {
+        result = fromAmount * toRate;
+    } else if (toCurrency === 'USD') {
+        result = fromAmount / fromRate;
+    } else {
+        // 다른 통화 간 변환: from -> USD -> to
+        const usdAmount = fromAmount / fromRate;
+        result = usdAmount * toRate;
+    }
     
     // 결과 표시
     document.getElementById('toAmount').textContent = formatNumber(result);
@@ -54,12 +113,15 @@ function swapCurrencies() {
 }
 
 // 이벤트 리스너 설정
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     const fromAmount = document.getElementById('fromAmount');
     const fromCurrency = document.getElementById('fromCurrency');
     const toCurrency = document.getElementById('toCurrency');
     const swapBtn = document.getElementById('swapBtn');
     const calculateBtn = document.getElementById('calculateBtn');
+    
+    // 실시간 환율 가져오기
+    await fetchExchangeRates();
     
     // 입력 변경 시 자동 계산
     fromAmount.addEventListener('input', calculateExchange);
