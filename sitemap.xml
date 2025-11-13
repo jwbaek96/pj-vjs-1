@@ -1,388 +1,218 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-        
-
-    <!-- Homepage -->    <!-- Homepage -->
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/</loc>        <loc>https://quickconvert.kr/</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>daily</changefreq>        <changefreq>daily</changefreq>
-
-        <priority>1.0</priority>        <priority>1.0</priority>
-
-    </url>    </url>
-
-        
-
-    <!-- Converter Pages -->    <!-- Converter Pages -->
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/length.html</loc>        <loc>https://quickconvert.kr/length.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.9</priority>        <priority>0.9</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/weight.html</loc>        <loc>https://quickconvert.kr/weight.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.9</priority>        <priority>0.9</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/temperature.html</loc>        <loc>https://quickconvert.kr/temperature.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.9</priority>        <priority>0.9</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/acceleration.html</loc>        <loc>https://quickconvert.kr/acceleration.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/angle.html</loc>        <loc>https://quickconvert.kr/angle.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/data.html</loc>        <loc>https://quickconvert.kr/data.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/volume.html</loc>        <loc>https://quickconvert.kr/volume.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/speed.html</loc>        <loc>https://quickconvert.kr/speed.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/time.html</loc>        <loc>https://quickconvert.kr/time.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/pressure.html</loc>        <loc>https://quickconvert.kr/pressure.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/energy.html</loc>        <loc>https://quickconvert.kr/energy.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/power.html</loc>        <loc>https://quickconvert.kr/power.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/area.html</loc>        <loc>https://quickconvert.kr/area.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/torque.html</loc>        <loc>https://quickconvert.kr/torque.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/currency.html</loc>        <loc>https://quickconvert.kr/currency.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/converters/force.html</loc>        <loc>https://quickconvert.kr/force.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.8</priority>        <priority>0.8</priority>
-
-    </url>    </url>
-
-        
-
-    <!-- Blog Section -->    <!-- Blog Section -->
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/</loc>        <loc>https://quickconvert.kr/blog/</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>weekly</changefreq>        <changefreq>weekly</changefreq>
-
-        <priority>0.7</priority>        <priority>0.7</priority>
-
-    </url>    </url>
-
-        
-
-    <!-- Blog Posts -->    <!-- Blog Posts -->
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-length-guide.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-length-guide.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-temperature-guide.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-temperature-guide.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-data-size-guide.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-data-size-guide.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-area-pyeong.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-area-pyeong.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-weight-cooking.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-weight-cooking.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/blog/posts/blog-speed-travel.html</loc>        <loc>https://quickconvert.kr/blog/posts/blog-speed-travel.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>monthly</changefreq>        <changefreq>monthly</changefreq>
-
-        <priority>0.6</priority>        <priority>0.6</priority>
-
-    </url>    </url>
-
-        
-
-    <!-- Legal Pages -->    <!-- Legal Pages -->
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/legal/privacy.html</loc>        <loc>https://quickconvert.kr/legal/privacy.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>yearly</changefreq>        <changefreq>yearly</changefreq>
-
-        <priority>0.3</priority>        <priority>0.3</priority>
-
-    </url>    </url>
-
-        
-
-    <url>    <url>
-
-        <loc>https://quickconvert.kr/legal/terms.html</loc>        <loc>https://quickconvert.kr/legal/terms.html</loc>
-
-        <lastmod>2025-11-11</lastmod>        <lastmod>2025-11-11</lastmod>
-
-        <changefreq>yearly</changefreq>        <changefreq>yearly</changefreq>
-
-        <priority>0.3</priority>        <priority>0.3</priority>
-
-    </url>    </url>
-
-        
-
-</urlset></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://quickconvert.kr/</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Converter Pages -->
+    <url>
+        <loc>https://quickconvert.kr/converters/length.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/weight.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/temperature.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/acceleration.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/angle.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/data.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/volume.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/speed.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/time.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/pressure.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/energy.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/power.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/area.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/torque.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/currency.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/converters/force.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Calculator Pages -->
+    <url>
+        <loc>https://quickconvert.kr/calculators/exchange-rate.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/discount.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/tip.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/salary.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/bmi.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/calorie.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/calculators/water.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Section -->
+    <url>
+        <loc>https://quickconvert.kr/blog/index.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-length-guide.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-temperature-guide.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-data-size-guide.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-area-pyeong.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-weight-cooking.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/blog/posts/blog-speed-travel.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://quickconvert.kr/legal/privacy.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://quickconvert.kr/legal/terms.html</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>
 

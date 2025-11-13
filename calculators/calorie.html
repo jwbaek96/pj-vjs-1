@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="칼로리 계산기 - 기초대사율과 일일 권장 칼로리를 계산합니다. 나이, 성별, 활동량을 고려한 정확한 칼로리 계산.">
+    <meta name="keywords" content="칼로리 계산기, 기초대사율, BMR, 일일 권장 칼로리, 다이어트 칼로리">
+    <title>칼로리 계산기 - QuickConvert</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h2 class="hero-title">🔥 칼로리 계산기</h2>
+                <p class="hero-subtitle">기초대사율과 일일 권장 칼로리를 정확하게 계산하세요</p>
+            </section>
+
+            <section class="calculator-section">
+                <div class="calc-input-row">
+                    <div class="calc-input-group">
+                        <label for="gender" class="calc-label">성별</label>
+                        <select id="gender" class="calc-select">
+                            <option value="male">남성</option>
+                            <option value="female">여성</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-input-group">
+                        <label for="age" class="calc-label">나이</label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            class="calc-input" 
+                            placeholder="나이"
+                            min="10"
+                            max="100"
+                        >
+                    </div>
+                </div>
+
+                <div class="calc-input-row">
+                    <div class="calc-input-group">
+                        <label for="height" class="calc-label">키 (cm)</label>
+                        <input 
+                            type="number" 
+                            id="height" 
+                            class="calc-input" 
+                            placeholder="키"
+                            min="100"
+                            max="250"
+                        >
+                    </div>
+
+                    <div class="calc-input-group">
+                        <label for="weight" class="calc-label">체중 (kg)</label>
+                        <input 
+                            type="number" 
+                            id="weight" 
+                            class="calc-input" 
+                            placeholder="체중"
+                            min="30"
+                            max="200"
+                        >
+                    </div>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="activity" class="calc-label">활동 수준</label>
+                    <select id="activity" class="calc-select">
+                        <option value="1.2">비활동적 (운동 거의 안함)</option>
+                        <option value="1.375">가벼운 활동 (주 1-3회 운동)</option>
+                        <option value="1.55" selected>보통 활동 (주 3-5회 운동)</option>
+                        <option value="1.725">활발한 활동 (주 6-7회 운동)</option>
+                        <option value="1.9">매우 활발 (하루 2회 운동 또는 격한 운동)</option>
+                    </select>
+                </div>
+
+                <div class="calc-result">
+                    <div class="calorie-results">
+                        <div class="result-item">
+                            <h3>기초대사율 (BMR)</h3>
+                            <div class="result-value" id="bmrValue">0</div>
+                            <div class="result-unit">kcal/일</div>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>일일 권장 칼로리</h3>
+                            <div class="result-value" id="tdeeValue">0</div>
+                            <div class="result-unit">kcal/일</div>
+                        </div>
+                    </div>
+
+                    <div class="calorie-breakdown" id="calorieBreakdown"></div>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">칼로리 계산하기</button>
+            </section>
+
+            <section class="info-section">
+                <h3>칼로리 계산 정보</h3>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>기초대사율 (BMR)</h4>
+                        <p>생명 유지에 필요한 최소 칼로리입니다. 아무것도 하지 않고 가만히 있어도 소모되는 에너지량입니다.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>일일 권장 칼로리 (TDEE)</h4>
+                        <p>활동량을 고려한 하루 총 소모 칼로리입니다. 체중 유지를 위해 섭취해야 할 칼로리량입니다.</p>
+                    </div>
+                </div>
+
+                <div class="formula-info">
+                    <h4>계산 공식 (Harris-Benedict 수정 공식)</h4>
+                    <div class="formula">
+                        <p><strong>남성:</strong> BMR = 88.362 + (13.397 × 체중) + (4.799 × 키) - (5.677 × 나이)</p>
+                        <p><strong>여성:</strong> BMR = 447.593 + (9.247 × 체중) + (3.098 × 키) - (4.330 × 나이)</p>
+                        <p><strong>TDEE:</strong> BMR × 활동 계수</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/calorie.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BMI 계산기 - 체질량지수(Body Mass Index) 계산 및 비만도 판정. 키와 체중으로 간편하게 BMI 지수를 확인하세요.">
+    <meta name="keywords" content="BMI 계산기, 체질량지수, 비만도 판정, 표준체중, 건강체중">
+    <title>BMI 계산기 - QuickConvert</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h2 class="hero-title">💪 BMI 계산기</h2>
+                <p class="hero-subtitle">체질량지수를 계산하고 건강한 체중 범위를 확인하세요</p>
+            </section>
+
+            <section class="calculator-section">
+                <div class="calc-input-group">
+                    <label for="height" class="calc-label">키 (cm)</label>
+                    <input 
+                        type="number" 
+                        id="height" 
+                        class="calc-input" 
+                        placeholder="키를 입력하세요"
+                        min="50"
+                        max="250"
+                        step="0.1"
+                    >
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="weight" class="calc-label">체중 (kg)</label>
+                    <input 
+                        type="number" 
+                        id="weight" 
+                        class="calc-input" 
+                        placeholder="체중을 입력하세요"
+                        min="10"
+                        max="300"
+                        step="0.1"
+                    >
+                </div>
+
+                <div class="calc-result">
+                    <div class="bmi-display">
+                        <h3>BMI 지수</h3>
+                        <div class="bmi-value" id="bmiValue">0.0</div>
+                    </div>
+                    <div class="bmi-category" id="bmiCategory">키와 체중을 입력하세요</div>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">BMI 계산하기</button>
+            </section>
+
+            <section class="info-section">
+                <h3>BMI 지수 분류</h3>
+                <div class="bmi-table">
+                    <div class="bmi-row bmi-underweight">
+                        <span class="bmi-range">18.5 미만</span>
+                        <span class="bmi-status">저체중</span>
+                    </div>
+                    <div class="bmi-row bmi-normal">
+                        <span class="bmi-range">18.5 - 22.9</span>
+                        <span class="bmi-status">정상</span>
+                    </div>
+                    <div class="bmi-row bmi-overweight">
+                        <span class="bmi-range">23.0 - 24.9</span>
+                        <span class="bmi-status">과체중</span>
+                    </div>
+                    <div class="bmi-row bmi-obese1">
+                        <span class="bmi-range">25.0 - 29.9</span>
+                        <span class="bmi-status">비만 1단계</span>
+                    </div>
+                    <div class="bmi-row bmi-obese2">
+                        <span class="bmi-range">30.0 이상</span>
+                        <span class="bmi-status">비만 2단계</span>
+                    </div>
+                </div>
+
+                <div class="info-note">
+                    <h4>BMI 계산 공식</h4>
+                    <p>BMI = 체중(kg) ÷ 키(m)²</p>
+                    <p>※ 아시아인 기준으로 분류되며, 개인차가 있을 수 있습니다.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/bmi.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352248234640810"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="물 섭취량 계산기 - 체중, 활동량, 날씨를 고려한 개인 맞춤 일일 권장 수분 섭취량을 계산합니다.">
+    <meta name="keywords" content="물 섭취량 계산기, 수분 섭취량, 하루 물 권장량, 탈수 예방">
+    <title>물 섭취량 계산기 - QuickConvert</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h2 class="hero-title">💧 물 섭취량 계산기</h2>
+                <p class="hero-subtitle">체중과 활동량에 맞는 개인별 수분 섭취량을 계산하세요</p>
+            </section>
+
+            <section class="calculator-section">
+                <div class="calc-input-group">
+                    <label for="weight" class="calc-label">체중 (kg)</label>
+                    <input 
+                        type="number" 
+                        id="weight" 
+                        class="calc-input" 
+                        placeholder="체중을 입력하세요"
+                        min="30"
+                        max="200"
+                        step="0.1"
+                    >
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="activity" class="calc-label">활동 수준</label>
+                    <select id="activity" class="calc-select">
+                        <option value="low">낮음 (사무직, 집에서 휴식)</option>
+                        <option value="moderate" selected>보통 (일상적인 활동)</option>
+                        <option value="high">높음 (규칙적인 운동)</option>
+                        <option value="intense">매우 높음 (격한 운동, 육체 노동)</option>
+                    </select>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="climate" class="calc-label">날씨/환경</label>
+                    <select id="climate" class="calc-select">
+                        <option value="cool">시원함 (20°C 이하)</option>
+                        <option value="moderate" selected>보통 (20-25°C)</option>
+                        <option value="warm">따뜻함 (25-30°C)</option>
+                        <option value="hot">더움 (30°C 이상)</option>
+                    </select>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="exercise" class="calc-label">추가 운동 시간 (분/일)</label>
+                    <input 
+                        type="number" 
+                        id="exercise" 
+                        class="calc-input" 
+                        placeholder="0"
+                        min="0"
+                        max="480"
+                        value="0"
+                    >
+                </div>
+
+                <div class="calc-result">
+                    <div class="water-results">
+                        <div class="result-item main-result">
+                            <h3>일일 권장 수분 섭취량</h3>
+                            <div class="result-value" id="waterAmount">0</div>
+                            <div class="result-unit">리터</div>
+                        </div>
+                        
+                        <div class="water-breakdown" id="waterBreakdown">
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">물</span>
+                                <span class="breakdown-value" id="plainWater">0L</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">음식에서</span>
+                                <span class="breakdown-value" id="foodWater">0L</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="water-tips" id="waterTips"></div>
+                </div>
+
+                <button id="calculateBtn" class="calc-btn">물 섭취량 계산하기</button>
+            </section>
+
+            <section class="info-section">
+                <h3>수분 섭취 가이드</h3>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>기본 수분 필요량</h4>
+                        <p>체중 1kg당 약 30-35ml의 수분이 필요합니다. 활동량과 환경에 따라 추가로 필요할 수 있습니다.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>운동 시 수분 보충</h4>
+                        <p>운동 1시간당 추가로 500-750ml의 수분 섭취가 권장됩니다.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>수분 부족 신호</h4>
+                        <ul>
+                            <li>갈증, 입 마름</li>
+                            <li>소변 색깔이 진함</li>
+                            <li>피로감, 두통</li>
+                            <li>피부 탄력 감소</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>효율적인 수분 섭취</h4>
+                        <ul>
+                            <li>조금씩 자주 마시기</li>
+                            <li>기상 직후 물 한 컵</li>
+                            <li>식사 전후 적당량</li>
+                            <li>운동 전중후 충분한 보충</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hydration-schedule">
+                    <h4>하루 수분 섭취 스케줄 (예시)</h4>
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <span class="time">기상 시</span>
+                            <span class="amount">200-300ml</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">오전</span>
+                            <span class="amount">500-600ml</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">점심</span>
+                            <span class="amount">400-500ml</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">오후</span>
+                            <span class="amount">500-600ml</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">저녁</span>
+                            <span class="amount">400-500ml</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">운동 시</span>
+                            <span class="amount">추가 500-750ml</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/calculators/water.js"></script>
+</body>
+</html>
